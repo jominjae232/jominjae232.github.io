@@ -26,41 +26,129 @@
         </tr>
     </table>
     <div id="one">헬로우 자바스크립트</div>
+    <input type="text" name="name" id="name" value="테스트">
+    <button onclick="checkValue()">입력값 확인</button>
     <script>
+        // 여러개의 element선택
+        var names = document.getElementById('name');
+        // 변수의 영역(scope)
+        // function스코프변수 예약어 var, 블럭 scope변수예약어 let, const
+        var i = 10;
+        var i2 = 0;
+        if (i>5) {
+            let i2 = 100;
+        }else{
+            let i2 = 200;//let변수는 (블럭)영역 안쪽에서 만 효력이 있음.
+        }
+        function test(parms) {
+            var i2 = 200;//var 사용하면 변수 재정의된 변수 밖으로 못나감.
+        }
+        test(1);
+        document.write(i2);
+        document.write('<hr>');
+        var arrays = [10, 20, 30, 40, 50];
+        // 반복문2: while 문은 for문보다는 조금사용, 잘못하면 무한반복 되기 때문
+        // while문 주로 IoT에서 많이 사용합니다. 온도센서 값 입력할때 무한반복되야 합니다.
+        var i = 0;
+        while (i < arrays.length) {
+            document.write(arrays[i]);
+            document.write('<br>');
+            i = i + 1;// i++
+        }
+        document.write('<hr>');
+        // 반복문1: for문 ~하는 동안 반복해라.
+        
+        // for(시작값; 종료값; 증가값) {}
+        // i--; i = i - 1;
+        // i++; i = i + 1;
+        // for(var i=(arrays.length-1); i>=0; i--) {//내림차순출력
+        for(var i=0; i<arrays.length; i++) {//오름차순출력
+            document.write(arrays[i]);
+            document.write('<br>');
+        }
+        // 조건문: 비교
+        if (1>3) {
+            document.write('if문 시작');
+        } else if(2 == 3) {
+            document.write('else if 첫번째');
+        } else if('a' == 'a') {
+            document.write('else if 두번째');
+        } else {
+            document.write('else 문');
+        }
+        document.write('<br>');
+        // 선택문: Swich case 스위치 케이스문
+        var key = 3;
+        switch (key) {
+            case 1:
+                document.write(key,'를 선택했습니다.');
+                break;//switch문 빠져나갑니다.(중지)
+            case 2:
+                document.write(key,'를 선택했습니다.');
+                break;
+            case 3:
+                document.write(key,'를 선택했습니다.');
+                break;
+            default:
+                document.write('선택된 키가 없습니다.');
+                break;
+        }
+        document.write('<hr>');
+        // 인터넷 자료교환 대량 데이터형식: xml 태그 데이터 형식
+        // 지금은 json(JavaScript Object Notation)자바스크립트 객체 표시
+        var human = {
+            name:{
+                firstname:'조',
+                lastname:'민재'
+            },            // object(배열)
+            age:21,       // number
+            married:false //boolean
+        }
+        document.write(typeof(human));
+        document.write('<br>');
+        document.write(human['name']);
+        document.write('<br>');
+        document.write(human['name']['lastname']);
+        document.write('<br>');
+        document.write(human['name']['age']);//값을 파싱 할때, 키로 값을 뽑아냅니다.
+        document.write('<hr>');
+        // 복잡해 보이지만, key:value (고유키:값)
         // 사용자 데이터형: object(array) 배열
         // 참고: 기본형 데이터: number, string, boolean
-        var array = [10, 20, 30, 40];
-        document.write(typeof(array));
+        var arrays = [10, 20, 30, 40];
+        document.write(typeof(arrays));
         document.write('<br>');
-        document.write(arrays[2]);//배열index는 0부터 시작
+        document.write(arrays[2]);//배열index는 0부터 시작.
         document.write('<br>');
-        document.write(arrays.slice(1,4));//index 1~4미만
+        document.write(arrays.slice(1,4));//index 1 ~ 4미만
         document.write('<br>');
-        document.write(arrays);//pop를 이전의 배열값
+        document.write(arrays);//pop 이전의 배열값
         document.write('<br>');
-        document.write(arrays.pop());//arrays에서 자료를 출력.내용삭제
+        document.write(arrays.pop());//arrays에서 자료를 출력.내용삭제 //pop 제일 마지막에 입력된==index가 제일 마지막인값이 출력
         document.write('<br>');
-        document.write(arrays);//pop 이후 배열값
+        document.write(arrays);//pop 이후의 배열값
         document.write('<br>');
         document.write(arrays.push(1000));//arrays에 자료 입력
+        // push 인덱스값이 제일 마지막인 자료 다음에 입력이 됩니다.
         document.write('<br>');
         document.write(arrays);
         document.write('<br>');
-        document.write(arrays.join('||'));//arrays에 자료가 입력은x
+        document.write(arrays.join('!!'));//arrays에 자료가 입력은X
         document.write('<br>');
         document.write(arrays);
         document.write('<br>');
+        document.write(arrays.reverse());//sort오름차순1,2,3, reverse내림차순3,2,1
         document.write('<br>');
         // 날짜 처리 함수
         var date = new Date;//new 키워드(예약어)로 함수형변수 생성
         var date2 = new Date;//웹브라우저의 PC의 시간이 저장됩니다.
         document.write(date);
         document.write('<br>');
-        document.write(date.getMonth());//현재 월구하기
+        document.write(date.getMonth()+1);//현재 월구하기 0부터 시작해서
         document.write('<br>');
-        document.write(date.getDay());//현재 요일 (일0, 월1화2...)
+        document.write(date.getDay());//현재 요일(일0,월1화2.수3...)
         document.write('<br>');
-        document.write(dete.getDate());//현재 날짜 구하기
+        document.write(date.getDate());//현재 날짜 구하기
         document.write('<br>');
         document.write(date.getHours());//현재 시간
         document.write('<hr>');
