@@ -43,6 +43,34 @@
             font-size: 1.5rem;
             /* 위에서부터 해석하는 방식 인터프러터형=자바스크립튼 인터프린터형 언어 */
         }
+        .box-one{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            padding: 20px; /* 안쪽여백 */
+            /* 안쪽여백 : 4가지 방향 12시 시작 시계방향*/
+            margin: 20px 10px 50px 80px; /* 바깥여백 */
+            /* 바깥쪽여백 : 2가지 방향 상하 / 좌우 */
+            margin: 30px 60px; /* 30 상하, 60좌 우 */
+            border: 10px solid black;
+            box-sizing: border-box;
+            /* 가로 가운데 정렬하는 방법 */
+            margin: 0px;
+            margin: 0 auto; /* 0 상하, auto 좌우 */
+            margin: 0px;
+            position: absolute;
+            position: fixed;
+             /* 자리가 다른 태그와 관련없는 위치가짐 absolute 절대 위치, fixed 고정위치 */
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+    .box-two{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        box-sizing: border-box; /* 필수 */
+}
 </style>
 </head>
 <body>
@@ -67,6 +95,8 @@
         Cascade Style sheet 계층형 스타일 표 OK.
         01 css 적용하는 3가지 방법 확인, 내부css, 외부css, 인라인css OK.
      -->
+     <p><span style="color: tomato;">Lorem, ipsum</span> dolor sit amet consectetur adipisicing elit. Aliquid laborum molestiae, cupiditate harum unde ducimus dolor tempora earum error, aperiam excepturi enim provident voluptatum, officia optio at vel nam! Reprehenderit?</p>
+
      <p><span style="color: tomato;">Lorem, ipsum</span> dolor sit amet consectetur adipisicing elit. Aliquid laborum molestiae, cupiditate harum unde ducimus dolor tempora earum error, aperiam excepturi enim provident voluptatum, officia optio at vel nam! Reprehenderit?</p>
 </body>
 </html>

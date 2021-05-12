@@ -1,3 +1,11 @@
+#### 20210512(수) 작업내용
+- git clone 으로 프로젝트를 가져온 경우 아래 내용을 추가해 주셔야합니다.
+- git config --iist 확인에서 user.name, user.email 없으면 아래추가.
+- 터미널에서 아래 2가지 실행 
+- git config --local user.name 영문이름
+- git config --local user.email 영문이메일
+- 프로젝트를 1명 제작하는 경우 없기때문에, 2명일때 소스수정한 사람 확인할 정보 입니다.
+
 #### 20210511(화) 작업내용
 - 로렘 입숨 한글 URL: http://guny.kr/stuff/klorem/#/table-html
 - 로렘 입숨 영어 URL: https://loremipsum.io/generator/
