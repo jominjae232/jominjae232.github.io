@@ -320,7 +320,7 @@ header { /* 태그선택자 */
     text-align: left;
 }
 .bbs_line {
-    font: none;
+    float: none;
     width: 100%;
     padding: 20px 0;
     border-top: 1px solid #d6d7d8;
