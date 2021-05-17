@@ -30,23 +30,50 @@
             $.ajax({
                 type:'get',//method방법, get(검색),post(보안필요: 입력,수정,삭제)
                 url:'https://coroname.me/getdata',//RestApi서버의 URL주소,
-                dataType:'text',//RestApi서버에서 전송받은 데이터 형식을 명시, json, text
+                dataType:'json',//RestApi서버에서 전송받은 데이터 형식을 명시, json, text
                 success:function(result) {
-                    var jsonData = JSON.parse(result);
+                    // var jsonData = JSON.parse(result);
+                    var jsonData = result.data;//data 키의 값을 반환함.
                     console.log(jsonData);//result에는 위 url에서 dataType형식으로 받은자료가 저장됨
+                    var i = 0;// index 정의
+                    // 향상된 for반복문 사용
+                    for(var jsonOne of jsonData) {
+                        i = i + 1;
+                        $('#board #tbody').append('<tr>');
+                        $('#board #tbody').append('<td style="text-align:center;">'+(i)+'</td>');
+                        $('#board #tbody').append('<td style="background-color:red">'+jsonOne.place+'</td>');
+                        $('#board #tbody').append('<td>'+jsonOne.latlng+'</td>');
+                        $('#board #tbody').append('<td>'+jsonOne.createDate+'</td>');
+                        $('#board #tbody').append('<td>'+jsonOne.region+'</td>');
+                        $('#board #tbody').append('</tr>');
+                    }
+                // 오리지널 for반복문 사용
+                // 2차원배열 변수[가로][세로](표=데이터베이스DB의테이블)
+                var i = 0; //인덱스 값 초기화
+                for(i=0; i<jsonData.length; i++) {
+                        if(i==10) { break;}
+                        $('#board #tbody').append('<tr>');
+                        $('#board #tbody').append('<td style="text-align:center;">'+(i+1)+'</td>');
+                        $('#board #tbody').append('<td style="background-color:green">'+jsonData[i]['place']+'</td>');
+                        $('#board #tbody').append('<td>'+jsonData[i]['latIng']+'</td>');
+                        $('#board #tbody').append('<td>'+jsonData[i]['createDate']+'</td>');
+                        $('#board #tbody').append('<td>'+jsonData[i]['region']+'</td>');
+                        $('#board #tbody').append('</tr>');
+                    }
                 },
                 error:function() {
                     alert('RestApi서버에 문제가 발생했습니다. 나중에 이용해 주세요!');
                 }//url Rest서버가 정전, 프로그램에러일때, 처리할 내용 명시.
             });
         });
+        
         // 외부 js파일의 json 데이터를 body 태그안의 #board 내부에 파싱합니다.
         console.log(jsonData);
         // jsonData 파싱해서 #board 영역에 동적으로 출력
         $(document).ready(function(){
-            // 스프링jsp(java)방식에서 파싱하는 방법 (아래)
+            // 스프링jsp(java)방식에서 파싱하는 방법(아래)
             // 향상된 for반복문으로 파싱하는 방법(아래)
-            var i = 0; // index 정의
+            var i = 0;// index 정의
             for(var jsonOne of jsonData) {
                 i = i + 1;
                 $('#board #tbody').append('<tr>');
