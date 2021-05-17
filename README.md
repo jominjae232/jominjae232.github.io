@@ -1,24 +1,5 @@
-#### 작업예정:jQuery 제이쿼리 JSON 데이터 파싱
-- 외부 data.js 파일에서 json데이터를 저장한 후 html에서 불러와서 파싱.
-- 외부 사이트에서 제공하는(RestAPI 서버) json데이터를 html에서 불러와 파싱.
-- RestAPI서버 중 코로나19 확진자 데이터를 받아서 html에서 파싱(데이터를 분해해서 화면에 뿌려주는 작업)
-- RestAPI서버주소(빅데이터): https://coroname.me/getdata
-
-
-
-#### 20210517 (월) 작업
-- jQuery 제이쿼리 JSON 데이터 파싱
-- 외부 data.js 파일에서 json데이를 저장한 후 html에서 불러와서 파싱
-- 외부 사이트에서 제공하는(RestAPI서버) json데이터를 html에서 불러와 파싱.
-- RestAPI서버 중 코로나19 확진자 데이터를 받아서 html에서 파싱(데이터를 분해해서 화면에 뿌려주는 작업)
-- ReatAPI서버주소(빅데이터): https://coroname.me/getdata
-- 수업시작전, jsonData 파싱부분에서 append 사용에 2번 반복되는 부분 확인예정
-
-- 메인페이지에 자바스크립트(jQuery)적용.  (VS vode+HTML5+CSS+jQuery)
-- 제이쿼리적용부분 : 메뉴, 슬라이드이미지3개 처리 : 모바일 메인페이지만 마무리
-- 보통 이미지 슬라이드 처리는 외부 라이브러리(Lib) 사용(니보슬라이드, 캐로셀슬라이드)
-- 외부Lib 사용 안 하고, 우리가 만들어 봅니다.
-- 테블릿 메인 CSS 스타일처리, PC용 메인 CSS 스타일처리
+#### 작업예정.
+- 메인페이지 테블릿 메인 CSS 스타일처리, PC용 메인 CSS 스타일처리
 - 모바일 서브페이지 CSS 스타일처리
 - 테블릿 + PC용 CSS 스타일처리
 - 모바일 게시판페이지 (CRUD) CSS처리
@@ -28,6 +9,21 @@
 - UI디자인 끝 ------------------------------------------
 - UI구현 시작 ----------- 스프링프로젝트 시작(이클립스+자바+오라클+스프링)
 - UI구현 ....위에서 제작한 UI디자인 이용해서 프로그램을 입히게 됩니다.
+
+#### 20210517 (월) 작업
+- slide2.jpg 경로: https://pixabay.com/ko/photos/%EC%95%84%EC%9D%B4%EC%8A%AC%EB%9E%80%EB%93%9C-%EB%B6%81%EA%B7%B9-%EC%97%AC%EC%9A%B0-%EB%8F%99%EB%AC%BC-2126989/
+- slide3.jpg경로: https://pixabay.com/ko/photos/%ED%8F%AD%EC%8A%A4-%EB%88%88-%EC%88%B2-%EA%B2%A8%EC%9A%B8-%EA%B0%90%EA%B8%B0-5844892/
+- jQuery 제이쿼리 JSON 데이터 파싱
+- 외부 data.js 파일에서 json데이를 저장한 후 html에서 불러와서 파싱
+- 외부 사이트에서 제공하는(RestAPI서버) json데이터를 html에서 불러와 파싱.
+- RestAPI서버 중 코로나19 확진자 데이터를 받아서 html에서 파싱(데이터를 분해해서 화면에 뿌려주는 작업)
+- ReatAPI서버주소(빅데이터): https://coroname.me/getdata
+- 수업시작전, jsonData 파싱부분에서 append 사용에 2번 반복되는 부분 확인예정
+
+- 메인페이지에 자바스크립트(jQuery)적용.  (VS vode+HTML5+CSS+jQuery)
+- 제이쿼리적용부분 : 메뉴, 슬라이드이미지3개 처리 : 모바일 메인페이지만 마무리
+- 보통 이미지 슬라이드 처리는 외부 라이브러리(Lib) 사용(니보슬라이드, 캐러셀슬라이드)
+- 외부Lib 사용 안 하고, 우리가 만들어 봅니다.
 
 #### 20210514(금) 작업
 - 구문오류: syntex 신텍스(사인텍스)오류(문법오류)
