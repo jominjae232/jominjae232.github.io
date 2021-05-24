@@ -68,7 +68,7 @@ $(document).ready(function(){
 	});
 	// 서브메뉴2 액션
 	$('.gnb_depth2_2').mouseover(function(){
-		isOverSub2 = true //서브메뉴 2 계속 나타납니다.
+		isOverSub2 = true;//서브메뉴 2 계속 나타납니다.
 	});
 	$('.gnb_depth2_2').mouseout(function(){
 		isOverSub2 = false;//서브메뉴 2번이 사라집니다.
