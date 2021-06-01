@@ -139,7 +139,6 @@
 - jQuery Json 데이터 파싱 실습
 - 8교시에 과제물 다음카페로 제출
 
-
 #### 20210513(목) 작업내용
 - 픽사베이 이미지 3개 로고1, 슬라이드 이미지1, NoImage 1 받고, 경로 적어놓기
 로고: https://pixabay.com/ko/vectors/%EB%8F%99%EB%AC%BC-%EC%96%BC%EA%B5%B4-%EB%A1%9C%EA%B3%A0-%EB%84%88%EA%B5%AC%EB%A6%AC-2028258/
