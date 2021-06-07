@@ -1,0 +1,11 @@
+table {
+    border: 2px solid blue;
+    border-collapse: collapse;/* 테두리 공유 */
+    width: 700px;
+    height: 700px;
+}
+td {
+    border: 2px solid blue;
+    width: 100px;
+    text-align: center;
+}
