@@ -9,7 +9,7 @@ for(var i = 1; i <= a; ++i) {
         even = even + i
         console.log("짝수", i)
     } else {
-        odd = odd + 1
+        odd = odd + i
         console.log("홀수", i)
     };
 };
